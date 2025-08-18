@@ -12,6 +12,7 @@ const Navbar = () => {
     { name: "Events & Media", path: "/events" },
     { name: "Contact", path: "/contact" },
     { name: "Members Corner", path: "/members-corner" },
+    { name: "Fund Raising Partnership", path: "/fund-raising-parternship" },
   ];
 
 
@@ -25,7 +26,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-[#F0F4FA] shadow-lg fixed top-0 z-50 w-full">
-      <div className="container ml-8 px-3">
+      <div className="ml-8 px-3">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
@@ -43,7 +44,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`relative pb-1 font-medium transition-colors duration-300
+                className={`relative pb-1 font-medium transition-colors duration-300 
                   after:absolute after:left-0 after:bottom-0 after:h-[2px]
                   after:bg-yellow-400 after:transition-all after:duration-300
                   ${
@@ -60,9 +61,9 @@ const Navbar = () => {
           </div>
 
           <div>
-<button onClick={handleJoin} class="group relative inline-flex items-center justify-end px-8 py-3 overflow-hidden font-bold rounded-full shadow-lg transition-all duration-300 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-orange-500 hover:to-amber-400">
-  <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-orange-400 to-amber-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></span>
-  <span class="relative text-white text-lg tracking-wide group-hover:tracking-widest transition-all duration-300">
+<button onClick={handleJoin} class="group relative inline-flex items-center justify-end px-8 w-full py-3 overflow-hidden font-bold rounded-full shadow-lg transition-all duration-300 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-orange-500 hover:to-amber-400">
+  <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-orange-400 to-amber-500 transform translate-x-full transition-transform duration-500 ease-out"></span>
+  <span class="relative text-white text-lg tracking-wide">
     Join Us
   </span>
 </button>
