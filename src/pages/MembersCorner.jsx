@@ -9,6 +9,7 @@ import {
   Lock,
   X
 } from "lucide-react";
+import HappyDates from "../components/HappyDates";
 
 const MembersCorner = () => {
   const [selected, setSelected] = useState(null);
@@ -104,7 +105,9 @@ const MembersCorner = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-yellow-50 via-white to-amber-50 min-h-screen py-20 px-6 mt-12">
+<div>
+
+      <section className="bg-gradient-to-br from-yellow-50 via-white to-amber-50 min-h-screen py-20 px-6 mt-12">
       {/* Header */}
       <div className="text-center max-w-4xl mx-auto mb-16">
         <motion.div initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
@@ -186,6 +189,8 @@ const MembersCorner = () => {
         )}
       </AnimatePresence>
     </section>
+    <HappyDates/>
+</div>
   );
 };
 
