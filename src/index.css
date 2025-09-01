@@ -507,3 +507,9 @@ body {
         .card-gradient:hover {
             background: linear-gradient(135deg, rgba(99,102,241,0.1) 0%, rgba(168,85,247,0.1) 100%);
         }
+
+
+
+        .rotary-gradient {
+          background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 50%, #3b82f6 100%);
+      }

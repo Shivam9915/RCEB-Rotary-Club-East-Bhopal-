@@ -12,10 +12,8 @@ const Navbar = () => {
       name: "Home",
       path: "/",
       submenu: [
-        { name: "Hero Banner", path: "/#hero" },
         { name: "Quick Highlights", path: "/#highlights" },
         { name: "About RCEB", path: "/#about" },
-        { name: "Current Projects", path: "/#projects" },
         { name: "Upcoming Events", path: "/#events" },
         { name: "7 Areas of Focus", path: "/#focus" },
         { name: "Member Spotlight", path: "/#spotlight" },
@@ -25,54 +23,56 @@ const Navbar = () => {
       name: "About Us",
       path: "/about",
       submenu: [
-        { name: "Club Profile", path: "/about#profile" },
-        { name: "Golden Jubilee Story", path: "/about#jubilee" },
-        { name: "Presidents Gallery", path: "/about#presidents" },
-        { name: "Board of Directors", path: "/about#board" },
-        { name: "Affiliated Clubs", path: "/about#clubs" },
-        { name: "Founding Members", path: "/about#founders" },
+        { name: "Club Profile", path: "/about/profile" },
+        { name: "Golden Jubilee Story", path: "/about/jubilee" },
+        { name: "Presidents Gallery", path: "/about/presidents" },
+        { name: "Board of Directors", path: "/about/board" },
+        { name: "SAP (Strategic Action Panel) Members & Roles", path: "/about/SAP" },
+        { name: "Affiliated Clubs", path: "/about/clubs" },
+        { name: "Founding Members", path: "/about/founders" },
       ],
     },
     {
       name: "Our Work",
       path: "/work",
       submenu: [
-        { name: "Current Projects", path: "/work#current" },
-        { name: "Signature Projects", path: "/work#signature" },
-        { name: "Golden Jubilee Projects", path: "/work#jubilee" },
-        { name: "Past Projects", path: "/work#past" },
-        { name: "International Grants", path: "/work#grants" },
-        { name: "Rotary Focus Areas", path: "/work#focus" },
+        { name: "Current Projects", path: "/work/current" },
+        { name: "Signature Projects", path: "/work/signature" },
+        { name: "Golden Jubilee Projects", path: "/work/jubilee" },
+        { name: "Past Projects", path: "/work/past" },
+        { name: "International Projects & Global Grants", path: "/work/grants" },
       ],
     },
     {
       name: "Events & Media",
       path: "/events",
       submenu: [
-        { name: "Latest News", path: "/events#news" },
-        { name: "Photo Gallery", path: "/events#photos" },
-        { name: "Video Gallery", path: "/events#videos" },
-        { name: "Event Calendar", path: "/events#calendar" },
-        { name: "Press & Awards", path: "/events#press" },
+        { name: "Latest News", path: "/events/news" },
+        { name: "Photo Gallery", path: "/events/photos" },
+        { name: "Video Gallery", path: "/events/videos" },
+        { name: "Event Calendar", path: "/events/calendar" },
+        { name: "Press & Awards", path: "/events/press" },
       ],
     },
     {
       name: "Members Corner",
       path: "/members-corner",
       submenu: [
-        { name: "Member Directory", path: "/members#directory" },
-        { name: "Orientation Details", path: "/members#orientation" },
-        { name: "Application Form", path: "/members#form" },
+        { name: " Minutes of Meetings", path: "/members/minutesof/meeting" },
+        { name: " Project Documents & Reports", path: "/members/documents/reports" },
+        { name: " Event Registrations ", path: "/members/event/registrations" },
+        { name: "  Financial Reports ", path: "/members/reports" },
+        { name: " Member Forum / Discussion Board ", path: "/members/forum" },
       ],
     },
     {
       name: "Fund Raising Partnership",
       path: "/fund-raising-partnership",
       submenu: [
-        { name: "Rotary Foundation (TRF)", path: "/fundraising#trf" },
-        { name: "How to Contribute", path: "/fundraising#contribute" },
-        { name: "CSR Partnerships", path: "/fundraising#csr" },
-        { name: "Donor Recognition", path: "/fundraising#donors" },
+        { name: "Rotary Foundation (TRF)", path: "/fundraising/foundation" },
+        { name: "How to Contribute", path: "/fundraising/contribute" },
+        { name: "CSR Partnerships", path: "/fundraising/csr" },
+        { name: "Donor Recognition", path: "/fundraising/donors" },
       ],
     },
         { name: "Contact", path: "/contact" },
@@ -119,20 +119,25 @@ const Navbar = () => {
 
   {/* Dropdown */}
   {item.submenu && (
-    <div
-      className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-3 grid grid-cols-1 gap-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 translate-y-2 transition-all duration-300"
-    >
-      {item.submenu.map((sub) => (
-        <Link
-          key={sub.name}
-          to={sub.path}
-          className="block px-3 py-2 text-sm text-gray-700 rounded-md hover:bg-blue-100 hover:text-blue-900 transition"
-        >
-          {sub.name}
-        </Link>
-      ))}
-    </div>
-  )}
+  <div
+    className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-3 grid grid-cols-1 gap-2 
+               opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-1 
+               translate-y-2 transition-all duration-300
+               before:content-[''] before:absolute before:-top-2 before:left-6 before:border-l-8 before:border-r-8 
+               before:border-b-8 before:border-l-transparent before:border-r-transparent before:border-b-gray-500"
+  >
+    {item.submenu.map((sub) => (
+      <Link
+        key={sub.name}
+        to={sub.path}
+        className="block px-3 py-2 text-sm text-gray-700 rounded-md hover:bg-blue-100 hover:text-blue-900 transition"
+      >
+        {sub.name}
+      </Link>
+    ))}
+  </div>
+)}
+
 </div>
 
             ))}
