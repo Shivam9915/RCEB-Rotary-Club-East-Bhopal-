@@ -7,6 +7,7 @@ import {
   History,
   Target,
 } from "lucide-react";
+import Footer from "../components/Footer";
 
 const workSections = [
   {
@@ -43,6 +44,7 @@ const workSections = [
 
 const OurWork = () => {
   return (
+<>
     <section className="bg-gradient-to-b from-gray-50 to-white py-16 px-6 my-10">
       <div className="max-w-6xl mx-auto">
         <motion.h2
@@ -78,6 +80,10 @@ const OurWork = () => {
         </div>
       </div>
     </section>
+
+    <Footer/>
+
+</>
   );
 };
 

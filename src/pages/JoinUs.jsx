@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Leaf, Globe, Handshake, Rocket, ClipboardList, Download, Users, Lock } from "lucide-react";
+import Footer from "../components/Footer";
 
 const JoinUs = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,6 +18,7 @@ const JoinUs = () => {
   };
 
   return (
+<>
     <section className="bg-gradient-to-br from-pink-100 via-peach-100 to-yellow-100 py-16 px-6 min-h-screen flex flex-col items-center justify-center mt-12">
       
       {/* Header */}
@@ -160,6 +162,11 @@ const JoinUs = () => {
         </p>
       </motion.div>
     </section>
+
+    <Footer/>
+
+
+</>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Footer from '../components/Footer';
 
 // --- Mock Data for Rotary Projects ---
 const projectsData = [
@@ -113,6 +114,7 @@ const currentYearProjects = () => {
                   </motion.div>
               </div>
           </div>
+          <Footer/>
       </>
   );
 }

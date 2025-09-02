@@ -1,5 +1,6 @@
 import React from 'react'
 import { Users, Handshake, Heart, CalendarDays, ArrowRight } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 
 const AboutRCEB = () => {
@@ -12,7 +13,7 @@ const AboutRCEB = () => {
 
   
     return (
-      <section className="relative overflow-hidden bg-white">
+      <section id='rceb'className="relative overflow-hidden bg-white">
         {/* Decorative gradients */}
         <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-gradient-to-br from-orange-200 via-amber-100 to-transparent blur-3xl opacity-70" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-gradient-to-tr from-emerald-200 via-teal-100 to-transparent blur-3xl opacity-70" />
@@ -108,18 +109,18 @@ const AboutRCEB = () => {
                   </div>
   
                   <div className="mt-4 flex flex-wrap gap-3">
-                    <a
-                      href="#contact"
+                    <Link
+                      to="/contact"
                       className="inline-flex items-center justify-center rounded-xl bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700"
                     >
                       Contact Us
-                    </a>
-                    <a
-                      href="#donate"
+                    </Link>
+                    <Link
+                      to="/join"
                       className="inline-flex items-center justify-center rounded-xl border border-emerald-200 bg-white px-4 py-2 text-sm font-semibold text-emerald-700 shadow-sm transition hover:border-emerald-300"
                     >
                       Support / Donate
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

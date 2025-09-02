@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import Footer from "../components/Footer";
 
 const PhotoGallery = () => {
   const photos = [
@@ -47,6 +48,7 @@ const PhotoGallery = () => {
   };
 
   return (
+<>
     <div className="bg-gray-50 py-12 px-6 md:px-12 min-h-screen">
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
@@ -185,6 +187,10 @@ const PhotoGallery = () => {
         }
       `}</style>
     </div>
+
+    <Footer/>
+
+</>
   );
 };
 

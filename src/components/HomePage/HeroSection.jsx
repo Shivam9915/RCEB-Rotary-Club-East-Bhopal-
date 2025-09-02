@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate()
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white py-20">
       {/* Decorative Animated Circles */}
@@ -42,6 +44,7 @@ const HeroSection = () => {
             </motion.button>
 
             <motion.button
+            onClick={()=>{navigate("/work")}}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-blue-900 shadow-lg hover:shadow-xl transition"

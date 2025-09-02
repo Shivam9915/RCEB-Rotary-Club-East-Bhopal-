@@ -298,34 +298,8 @@ const AboutUs = () => {
       </div>
       <Footer />  
     
-      {/* <footer className=" footer-about bg-gray-800 text-white py-12 text-center">
-          <div className="container-about mx-auto px-4">
-            <p>&copy; 2025 Rotary Club. All Rights Reserved.</p>
-            <p className="italic">"Service Above Self"</p>
-            <div className="flex justify-center mt-5 space-x-4">
-              <a href="#" className="text-white hover:text-blue-400 transition">
-                <FontAwesomeIcon icon={faFacebook} size="lg" />
-              </a>
-              <a href="#" className="text-white hover:text-blue-400 transition">
-                <FontAwesomeIcon icon={faTwitter} size="lg" />
-              </a>
-              <a href="#" className="text-white hover:text-blue-400 transition">
-                <FontAwesomeIcon icon={faInstagram} size="lg" />
-              </a>
-              <a href="#" className="text-white hover:text-blue-400 transition">
-                <FontAwesomeIcon icon={faLinkedin} size="lg" />
-              </a>
-            </div>
-          </div>
-        </footer> */}
-    
-        {/* <button 
-          id="backToTop"
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-blue-900 text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-blue-700"
-        >
-          <FontAwesomeIcon icon={faArrowUp} />
-        </button> */}
+     
+     
       </div>
     );
     };

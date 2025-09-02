@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Footer from '../components/Footer';
 
 // --- Helper Components for Icons ---
 const CategoryIcon = ({ category, className = "w-8 h-8" }) => {
@@ -120,6 +121,8 @@ const PastProject = () => {
           </motion.div>
         </div>
       </div>
+
+      <Footer/>
     </>
   );
 }

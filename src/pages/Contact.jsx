@@ -1,7 +1,9 @@
 import React from 'react'
+import Footer from '../components/Footer'
 
 const Contact = () => {
   return (
+<>
     <div>
       
       <section class="bg-gray-50 min-h-screen mt-12">
@@ -85,6 +87,11 @@ const Contact = () => {
 </section>
 
     </div>
+
+    <Footer/>
+
+
+</>
   )
 }
 

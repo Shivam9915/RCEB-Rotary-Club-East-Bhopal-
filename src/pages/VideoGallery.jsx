@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Play } from "lucide-react";
+import Footer from "../components/Footer";
 
 const VideoGallery = () => {
   const videos = [
@@ -18,6 +19,7 @@ const VideoGallery = () => {
   const handleNext = () => setSelectedIndex(prev => (prev === videos.length - 1 ? 0 : prev + 1));
 
   return (
+<>
     <div className="bg-gradient-to-b from-white via-gray-50 to-gray-100 py-12 px-6 md:px-12 min-h-screen">
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
@@ -120,6 +122,11 @@ const VideoGallery = () => {
         .animate-borderMove { animation: borderMove 4s linear infinite; }
       `}</style>
     </div>
+
+    <Footer/>
+
+
+</>
   );
 };
 

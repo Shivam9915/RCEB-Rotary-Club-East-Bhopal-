@@ -1,9 +1,12 @@
 import React from 'react';
+import Footer from '../components/Footer';
 
 // The main application component
 
 const ClubProfile = () => {
   return (
+<>
+
     <div className="antialiased  mt-14 font-sans text-gray-200 min-h-screen flex flex-col items-center justify-start p-6 sm:p-10 relative">
       <div
         className="w-full h-full absolute top-0 left-0"
@@ -113,6 +116,11 @@ const ClubProfile = () => {
         </main>
       </div>
     </div>
+
+    <Footer/>
+
+
+</>
   );
 }
 

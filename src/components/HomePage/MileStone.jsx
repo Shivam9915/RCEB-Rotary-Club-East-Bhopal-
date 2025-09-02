@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const MileStone = () => {
   return (
@@ -50,9 +51,9 @@ const MileStone = () => {
       </div>
       
       <div class="text-center mt-8">
-        <button class="border-2 border-blue-800 text-blue-800 font-bold py-3 px-6 rounded-full hover:bg-blue-50 transition">
+        <Link  to="/about/jubilee" class="border-2 border-blue-800 text-blue-800 font-bold py-3 px-6 rounded-full hover:bg-blue-50 transition">
           View Full Timeline <i class="fas fa-history ml-2"></i>
-        </button>
+        </Link>
       </div>
     </div>
   </section>

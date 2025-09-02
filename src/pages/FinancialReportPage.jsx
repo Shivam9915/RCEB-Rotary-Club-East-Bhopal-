@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FileBarChart, ChevronDown, FileText, Download, CircleDot } from 'lucide-react';
+import Footer from '../components/Footer';
 
 // --- Mock Data (replace with API in real app) ---
 const financialReportsData = [
@@ -68,6 +69,7 @@ const FinancialReportsPage = () => {
   const [expanded, setExpanded] = useState(null);
 
   return (
+<>
     <div className="bg-slate-900 min-h-screen font-sans text-white p-8 flex flex-col items-center relative overflow-hidden">
       <div
         className="w-full h-full absolute top-0 left-0"
@@ -148,6 +150,11 @@ const FinancialReportsPage = () => {
         </motion.div>
       </div>
     </div>
+
+    <Footer/>
+
+
+</>
   );
 };
 

@@ -10,6 +10,7 @@ import {
   X
 } from "lucide-react";
 import HappyDates from "../components/HappyDates";
+import Footer from "../components/Footer";
 
 const MembersCorner = () => {
   const [selected, setSelected] = useState(null);
@@ -105,6 +106,7 @@ const MembersCorner = () => {
   ];
 
   return (
+<>
 <div>
 
       <section className="bg-gradient-to-br from-yellow-50 via-white to-amber-50 min-h-screen py-20 px-6 mt-12">
@@ -191,6 +193,11 @@ const MembersCorner = () => {
     </section>
     <HappyDates/>
 </div>
+
+<Footer/>
+
+
+</>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Footer from '../components/Footer';
 
 // --- Mock Data for Founding Members ---
 // In a real application, you would fetch this data from an API.
@@ -75,8 +76,10 @@ const cardVariants = {
 
 
 // --- The Main Component ---
+
 const FoundingMembers = () => {
   return (
+<>
     <div className="bg-slate-900 mt-16 min-h-screen text-white font-sans p-8 overflow-hidden">
       <div className="container mx-auto max-w-6xl">
         
@@ -142,7 +145,13 @@ const FoundingMembers = () => {
           ))}
         </motion.div>
       </div>
-    </div>  )
+    </div>  
+
+    <Footer/> 
+  
+
+</>
+  )
 }
 
 export default FoundingMembers

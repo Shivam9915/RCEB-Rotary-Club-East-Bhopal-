@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Footer from '../components/Footer';
 
 // --- Helper Icon Components ---
 
@@ -68,6 +69,7 @@ const SignatureProjectCard = ({ project, index }) => {
 
 const SignatureProjects = () => {
   return (
+<>
     <div className="min-h-screen bg-[#0c1426] font-sans text-white overflow-x-hidden">
     <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
         <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-yellow-400/10 rounded-full filter blur-3xl animate-pulse"></div>
@@ -96,7 +98,15 @@ const SignatureProjects = () => {
             ))}
         </div>
     </div>
-</div>  )
+</div>  
+
+<Footer/>
+
+
+</>
+
+
+)
 }
 
 export default SignatureProjects

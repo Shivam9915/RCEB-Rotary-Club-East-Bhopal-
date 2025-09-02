@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "../components/Footer";
 
 const NewsPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -28,6 +29,7 @@ const NewsPage = () => {
   };
 
   return (
+<>
     <div className="bg-gray-50 font-sans">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-12">
@@ -218,6 +220,10 @@ const NewsPage = () => {
         </div>
     </main>
     </div>
+
+    <Footer/>
+
+</>
   );
 };
 

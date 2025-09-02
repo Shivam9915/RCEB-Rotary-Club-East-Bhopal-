@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { Handshake, HeartPulse, Droplet, Baby, Book, Building, Package, Globe, Shield } from "lucide-react";
+import Footer from '../components/Footer';
 
 // --- Motion Variants ---
 const containerVariants = {
@@ -14,6 +15,7 @@ const itemVariants = {
 
 // The main application component
 const RotaryFoundation = () => {
+<>
   <div className="antialiased font-sans text-gray-200 min-h-screen flex flex-col items-center justify-start p-6 sm:p-10 relative overflow-hidden">
   <div
     className="w-full h-full absolute top-0 left-0"
@@ -240,6 +242,10 @@ const RotaryFoundation = () => {
     </main>
   </div>
 </div>
+
+<Footer/>
+
+</>
 }
 
 export default RotaryFoundation

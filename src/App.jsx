@@ -16,7 +16,6 @@ import PresidentsGallery from './pages/PresidentsGallery'
 import BoardOfDirectors from './pages/BoardOfDirectors'
 import StrategicActionPanel from './pages/StrategicActionPanel'
 import AffiliatedClubs from './pages/AffiliatedClubs'
-import FoundingMembers from './pages/FoundingMembers'
 import MinutesContent from './pages/MinutesContent'
 import ProjectDocumentsPage from './pages/ProjectDocumentsPage'
 import EventRegistration from './pages/EventRegistrationsPage'
@@ -29,30 +28,46 @@ import GoldenJubileeStory from './pages/GoldenJubileeStory'
 import PastProject from './pages/PastProject'
 import ClubProfile from './pages/ClubProfile'
 import RotaryFoundation from './pages/RotaryFoundation'
+import QuickHighlights from './pages/QuickHighlights'
+import ScrollToHashElement from './components/ScrollToHashElement'
+import UpComingEvents from './pages/UpComingEvents'
+import FoucusAreas from './pages/FoucusAreas'
+import MemberSpotlight from './pages/MemberSpotlight'
+import FoundingMembers from './pages/FoundingMembers'
+import TRFPage from './pages/TRF'
+import Contribution from './pages/Contribution'
+import PartnerShips from './pages/PartnerShips'
+import DonorRecognition from './pages/DonorRecognition'
+import InternationalProject from './pages/InternationalProject'
+import PressAndAward from './pages/PressAndAward'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     
     <div className="bg-gray-100 min-h-screen">
     <Navbar />
+    <ScrollToHashElement />
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/highlights" element={<QuickHighlights/>} />
+      <Route path="/events" element={<UpComingEvents/>} />
+      <Route path="/focus" element={<FoucusAreas/>} />
       <Route path="/about" element={<AboutUs />} />
+      <Route path="/spotlight" element={<MemberSpotlight />} />
       <Route path="/about/profile" element={<ClubProfile />} />
       <Route path="/about/jubilee" element={<GoldenJubileeStory />} />
       <Route path="/about/presidents" element={<PresidentsGallery />} />
       <Route path="/about/board" element={<BoardOfDirectors />} />
       <Route path="/about/SAP" element={<StrategicActionPanel />} />
       <Route path="/about/clubs" element={<AffiliatedClubs />} />
-      <Route path="/about/founders" element={<FoundingMembers />} />
+      <Route path="/about/founders" element={<FoundingMembers/>} />
      <Route path="/work" element={<OurWork/>} />
      <Route path="/work/current" element={<CurrentYearProjects/>} />
      <Route path="/work/signature" element={<SignatureProjects/>} />
      <Route path="/work/jubilee" element={<GoldenJublieeProjects/>} />
      <Route path="/work/past" element={<PastProject/>} />
-     <Route path="/work/grants" element={<PastProject/>} />
+     <Route path="/work/grants" element={<InternationalProject/>} />
        <Route path="/events" element={<EventsAndMedia />} />
       <Route path="/contact" element={<Contact />} />   
       <Route path="/join-us" element={<JoinUs />} />   
@@ -66,7 +81,13 @@ function App() {
       <Route path="/events/news" element={<NewsPage/>} />
       <Route path="/events/photos" element={<PhotoGallery/>} />
       <Route path="/events/videos" element={<VideoGallery/>} />
-      <Route path="/fundraising/foundation" element={<RotaryFoundation/>} />
+      <Route path="/events/press" element={<PressAndAward/>} />
+      {/* <Route path="/fundraising/foundation" element={<RotaryFoundation/>} /> */}
+      <Route path="/fundraising/foundation" element={<TRFPage/>} />
+      <Route path="/fundraising/contribute" element={<Contribution/>} />
+      <Route path="/fundraising/csr" element={<PartnerShips/>} />
+      <Route path="/fundraising/donors" element={<DonorRecognition/>} />
+      <Route path="/fund-raising-partnership" element={<PartnerShips/>} />
     </Routes>
   </div>
   

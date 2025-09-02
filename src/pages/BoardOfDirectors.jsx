@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Users, Briefcase, HandCoins, Megaphone } from 'lucide-react';
+import Footer from '../components/Footer';
 
 // --- MOCK DATA ---
 // In a real application, this would come from a CMS or API.
@@ -119,6 +120,8 @@ const BoardOfDirectors = () => {
     const otherDirectors = boardMembersData.slice(1);
 
   return (
+<>
+
     <div className="bg-gray-900 mt-14 text-white min-h-screen p-4 sm:p-8 md:p-12 font-sans overflow-x-hidden">
       {/* Custom background for aesthetics */}
       <div className="absolute inset-0 bg-dots-pattern opacity-10 z-0"></div>
@@ -191,6 +194,12 @@ const BoardOfDirectors = () => {
         </motion.div>
       </div>
     </div>
+
+
+    <Footer/>
+
+
+</>
   );
 };
 

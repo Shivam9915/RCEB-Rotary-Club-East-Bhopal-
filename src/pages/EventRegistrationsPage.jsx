@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, MapPin, Users, ClipboardCheck } from "lucide-react";
+import Footer from "../components/Footer";
 
 // --- Events Data ---
 const events = [
@@ -59,6 +60,7 @@ export default function EventRegistration() {
   };
 
   return (
+<>
     <div className="bg-slate-900 min-h-screen font-sans text-white p-8 flex flex-col items-center relative">
       <div
         className="w-full h-full absolute top-0 left-0"
@@ -198,5 +200,10 @@ export default function EventRegistration() {
         </p>
       </div>
     </div>
+
+    <Footer/>
+
+
+</>
   );
 }

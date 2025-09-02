@@ -1,6 +1,5 @@
 
 import React from "react";
-import MemberSpotlight from "../components/HomePage/MemberSpotlight";
 import HeroSection from "../components/HomePage/HeroSection";
 import HighlightsSection from "../components/HomePage/HighlightsSection";
 import ProjectSnapshot from "../components/HomePage/ProjectSnapshot";
@@ -23,7 +22,6 @@ export default function Home() {
   <FocusArea />
   <CountDown />
   <MileStone />
-  <MemberSpotlight />
   <Footer />
 
 

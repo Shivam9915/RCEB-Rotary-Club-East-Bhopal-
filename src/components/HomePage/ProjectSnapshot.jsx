@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ProjectSnapshot = () => {
   return (
@@ -41,9 +42,9 @@ const ProjectSnapshot = () => {
       </div>
       
       <div class="text-center mt-8">
-        <button class="bg-blue-800 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition">
+        <Link to="/work" class="bg-blue-800 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition">
           View All Projects <i class="fas fa-arrow-right ml-2"></i>
-        </button>
+        </Link>
       </div>
     </div>
   </section>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Footer from "../components/Footer";
 
 const RotaryClubCalendar = () => {
   const events = [
@@ -157,6 +158,7 @@ const RotaryClubCalendar = () => {
   };
 
   return (
+<>
     <div className="min-h-screen bg-gray-200">
       {/* Header */}
       <header className="rotary-gradient text-white shadow-2xl relative overflow-hidden pt-12">
@@ -376,6 +378,12 @@ const RotaryClubCalendar = () => {
         </div>
       )}
     </div>
+
+    <Footer/>
+
+
+
+</>
   );
 };
 

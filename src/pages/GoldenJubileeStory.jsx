@@ -1,6 +1,7 @@
 import React from 'react';
 // Step 1: Import icons from 'lucide-react' instead of 'react-icons'
 import { Clock, Camera, Quote } from 'lucide-react';
+import Footer from '../components/Footer';
 
 // --- MOCK DATA (No changes here) ---
 const timelineEvents = [
@@ -75,6 +76,7 @@ const TimelineItem = ({ event, isLast }) => (
 
 const GoldenJubileeStory = () => {
   return (
+<>
     <div className="bg-gray-900 mt-14 text-white min-h-screen p-4 sm:p-8 md:p-12">
       <div className="max-w-7xl mx-auto">
         
@@ -143,6 +145,10 @@ const GoldenJubileeStory = () => {
 
       </div>
     </div>
+
+    <Footer/>
+
+</>
   );
 };
 

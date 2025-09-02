@@ -51,7 +51,7 @@ const UpcomingEvents = () => {
 
   return (
     <section className="bg-gray-50 py-10">
-      <div className="max-w-6xl mx-auto px-4">
+      <div style={{ marginTop: "20vh" }} className="max-w-6xl mx-auto px-4">
         <h2 className="text-[#1C398E] text-3xl font-bold mb-8 text-center">Upcoming Events</h2>
         <Slider {...settings}>
           {events.map((event, idx) => (

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Calendar, Download, Archive } from 'lucide-react';
+import Footer from '../components/Footer';
 
 // --- Mock Data for Meeting Minutes ---
 // In a real application, this would be fetched from a secure API.
@@ -52,6 +53,7 @@ const headerVariants = {
 // --- The Main Component ---
 const MinutesContent = () => {
   return (
+<>
     <div className="bg-slate-900 min-h-screen mt-9 font-sans text-white flex flex-col items-center">
       <div 
         className="w-full h-full absolute top-0 left-0"
@@ -117,6 +119,10 @@ const MinutesContent = () => {
         </motion.div>
       </div>
     </div>
+
+    <Footer/>
+
+</>
   );
 }
 

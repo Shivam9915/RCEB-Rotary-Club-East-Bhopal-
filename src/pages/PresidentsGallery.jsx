@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { UserCheck, X, Award } from 'lucide-react';
+import Footer from '../components/Footer';
 
 // --- MOCK DATA ---
 // In a real application, this would come from a CMS or API.
@@ -126,6 +127,8 @@ const PresidentsGallery = () => {
   const [selectedPresident, setSelectedPresident] = useState(null);
 
   return (
+<>
+
     <div className="bg-gray-900 text-white min-h-screen mt-14 p-4 sm:p-8 md:p-12 font-sans overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
@@ -218,6 +221,11 @@ const PresidentsGallery = () => {
         </AnimatePresence>
       </div>
     </div>
+
+
+    <Footer/>
+
+</>
   );
 };
 

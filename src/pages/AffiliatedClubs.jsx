@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Award, Users, Instagram, Facebook } from 'lucide-react';
+import Footer from '../components/Footer';
 
 // --- MOCK DATA ---
 // This data would be fetched from a CMS or API in a real-world application.
@@ -139,7 +140,8 @@ const ClubCard = ({ club }) => {
 // --- Main Component ---
 const AffiliatedClubs = () => {
   return (
-    <div className="bg-gray-900 text-white min-h-screen p-4 sm:p-8 md:p-12 font-sans overflow-hidden">
+<>
+    <div className="bg-gray-900 text-white min-h-screen p-4 sm:p-8 md:p-20 font-sans overflow-hidden">
       <div className="absolute inset-0 bg-dots-pattern opacity-10 z-0"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
@@ -201,6 +203,9 @@ const AffiliatedClubs = () => {
         </motion.section>
       </div>
     </div>
+
+<Footer/>
+</>
   );
 };
 

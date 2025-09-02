@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Footer from '../components/Footer';
 
 // --- Helper Components for Icons ---
 
@@ -53,6 +54,8 @@ const TimelineCard = ({ project, index }) => (
 // --- Main App Component ---
 const GoldenJublieeProjects = () => {
   return (
+
+<>
     <div className="min-h-screen bg-[#0c1426] font-sans text-white overflow-x-hidden">
     {/* Decorative background gradients */}
     <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
@@ -103,7 +106,12 @@ const GoldenJublieeProjects = () => {
       </div>
 
     </div>
-  </div>  )
+  </div>  
+  <Footer/>
+
+
+</>
+  )
 }
 
 export default GoldenJublieeProjects

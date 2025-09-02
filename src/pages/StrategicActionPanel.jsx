@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Users, Megaphone, Handshake, Gem } from 'lucide-react';
+import Footer from '../components/Footer';
 
 // --- MOCK DATA ---
 // This data would be fetched from a CMS or API in a real-world scenario.
@@ -106,6 +107,7 @@ const PanelMemberCard = ({ member }) => {
 // --- Main Component ---
 const StrategicActionPanel = () => {
   return (
+<>
     <div className="bg-gray-900 mt-14 text-white min-h-screen p-4 sm:p-8 md:p-12 font-sans overflow-x-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern opacity-5 z-0"></div>
@@ -144,6 +146,10 @@ const StrategicActionPanel = () => {
         </motion.div>
       </div>
     </div>
+
+    <Footer/>
+
+</>
   );
 };
 

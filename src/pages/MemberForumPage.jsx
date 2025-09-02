@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { MessageSquare, PlusCircle, Reply, UserCircle2, Tag, X } from "lucide-react";
+import Footer from "../components/Footer";
 
 // --- Mock Forum Data ---
 const discussionsData = [
@@ -87,6 +88,7 @@ const MemberForumPage = () => {
   };
 
   return (
+<>
     <div className="bg-slate-900 min-h-screen font-sans text-white p-8 flex flex-col items-center relative overflow-hidden">
       {/* Background Gradient */}
       <div
@@ -289,6 +291,11 @@ const MemberForumPage = () => {
         </div>
       )}
     </div>
+
+    <Footer/>
+
+
+</>
   );
 };
 

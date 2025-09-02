@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { navItems } from "../utils/navConfig";
+import RotaryLogo from "../assets/RotaryLogo.png"
 
 const Navbar = () => {
   const location = useLocation();
@@ -7,91 +9,21 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState(null);
 
-  const navItems = [
-    {
-      name: "Home",
-      path: "/",
-      submenu: [
-        { name: "Quick Highlights", path: "/#highlights" },
-        { name: "About RCEB", path: "/#about" },
-        { name: "Upcoming Events", path: "/#events" },
-        { name: "7 Areas of Focus", path: "/#focus" },
-        { name: "Member Spotlight", path: "/#spotlight" },
-      ],
-    },
-    {
-      name: "About Us",
-      path: "/about",
-      submenu: [
-        { name: "Club Profile", path: "/about/profile" },
-        { name: "Golden Jubilee Story", path: "/about/jubilee" },
-        { name: "Presidents Gallery", path: "/about/presidents" },
-        { name: "Board of Directors", path: "/about/board" },
-        { name: "SAP (Strategic Action Panel) Members & Roles", path: "/about/SAP" },
-        { name: "Affiliated Clubs", path: "/about/clubs" },
-        { name: "Founding Members", path: "/about/founders" },
-      ],
-    },
-    {
-      name: "Our Work",
-      path: "/work",
-      submenu: [
-        { name: "Current Projects", path: "/work/current" },
-        { name: "Signature Projects", path: "/work/signature" },
-        { name: "Golden Jubilee Projects", path: "/work/jubilee" },
-        { name: "Past Projects", path: "/work/past" },
-        { name: "International Projects & Global Grants", path: "/work/grants" },
-      ],
-    },
-    {
-      name: "Events & Media",
-      path: "/events",
-      submenu: [
-        { name: "Latest News", path: "/events/news" },
-        { name: "Photo Gallery", path: "/events/photos" },
-        { name: "Video Gallery", path: "/events/videos" },
-        { name: "Event Calendar", path: "/events/calendar" },
-        { name: "Press & Awards", path: "/events/press" },
-      ],
-    },
-    {
-      name: "Members Corner",
-      path: "/members-corner",
-      submenu: [
-        { name: " Minutes of Meetings", path: "/members/minutesof/meeting" },
-        { name: " Project Documents & Reports", path: "/members/documents/reports" },
-        { name: " Event Registrations ", path: "/members/event/registrations" },
-        { name: "  Financial Reports ", path: "/members/reports" },
-        { name: " Member Forum / Discussion Board ", path: "/members/forum" },
-      ],
-    },
-    {
-      name: "Fund Raising Partnership",
-      path: "/fund-raising-partnership",
-      submenu: [
-        { name: "Rotary Foundation (TRF)", path: "/fundraising/foundation" },
-        { name: "How to Contribute", path: "/fundraising/contribute" },
-        { name: "CSR Partnerships", path: "/fundraising/csr" },
-        { name: "Donor Recognition", path: "/fundraising/donors" },
-      ],
-    },
-        { name: "Contact", path: "/contact" },
 
-  ];
 
   return (
     <nav className="bg-[#F0F4FA] shadow-lg fixed top-0 z-50 w-full">
-      <div className="ml-8 px-3">
+      <div className="ml-1 px-3">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex flex-col items-center object-fill">
             <img
-              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/564d45f0-ff22-4892-82c6-b8b7d3217db3.png"
+              src={RotaryLogo}
               alt="Rotary Club East Bhopal Logo"
-              className="h-10 mr-3"
+              className="h-15 w-30 mr-3"
             />
-            <span className="text-blue-900 font-extrabold">
-              Rotary East Bhopal
+            <span className="text-blue-900 leading-1 font-extrabold">
+              Rotary Club East Bhopal
             </span>
           </div>
 

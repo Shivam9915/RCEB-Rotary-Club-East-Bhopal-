@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FolderKanban, ChevronDown, FileCheck2, Download, CircleDot } from 'lucide-react';
+import Footer from '../components/Footer';
 
 // --- Mock Data ---
 // In a real application, this data would be fetched from a secure API.
@@ -76,6 +77,8 @@ const ProjectDocumentsPage = () => {
   const [expanded, setExpanded] = useState(projectsData[0].id);
 
   return (
+<>
+
     <div className="bg-slate-900 min-h-screen font-sans text-white p-8 flex flex-col items-center">
        <div 
         className="w-full h-full absolute top-0 left-0"
@@ -156,6 +159,10 @@ const ProjectDocumentsPage = () => {
         </motion.div>
       </div>
     </div>
+
+    <Footer/>
+
+</>
   );
 }
 
