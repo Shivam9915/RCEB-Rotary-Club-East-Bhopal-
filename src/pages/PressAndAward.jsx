@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { Newspaper, Share2, Sparkles, Trophy, Facebook, Twitter, Instagram } from "lucide-react";
+import { Newspaper, Share2, Sparkles, Trophy, Facebook, Twitter, Instagram } from "lucide-react"
+import Footer from '../components/Footer';
 
 // --- Motion Variants ---
 const containerVariants = {
@@ -62,6 +63,7 @@ const PressAndAward = () => {
   ];
 
   return (
+<>
     <div className="min-h-screen bg-[#0b1a2c] font-sans text-white overflow-x-hidden">
         <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden" style={{ backgroundImage: "linear-gradient(to bottom, #0b1a2c 0%, #050f1a 100%)" }}>
             <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-emerald-500/10 rounded-full filter blur-3xl animate-pulse"></div>
@@ -179,7 +181,15 @@ const PressAndAward = () => {
                 </SectionCard>
             </main>
         </div>
+        <Footer/>
     </div>
+
+
+    
+
+    
+
+</>
   );
 }
 

@@ -1,10 +1,4 @@
-// This file contains a single, self-contained React footer component.
-// All components, data, and logic are contained within this one file for easy use.
 
-/**
- * @fileoverview Single-file React application for "Footer."
- * @author Gemini
- */
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
