@@ -9,12 +9,14 @@ import MileStone from "../components/HomePage/MileStone";
 import Footer from "../components/Footer";
 import UpcomingEvents from "../components/HomePage/UpcomingEvents";
 import AboutRCEB from "../components/HomePage/AboutRCEB.JSX";
+import GreetingsCard from "../components/GreetingsCard";
 
 export default function Home() {
   return (
 <div className="bg-gray-50 w-full min-h-screen">
 
   <HeroSection />
+  <GreetingsCard/>
   <UpcomingEvents />
   <AboutRCEB />
   <HighlightsSection />

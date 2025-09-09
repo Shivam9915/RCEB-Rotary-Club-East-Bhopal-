@@ -49,11 +49,13 @@ export  const navItems = [
       name: "Members Corner",
       path: "/members-corner",
       submenu: [
+        { name: "Celebration Calendar", path: "/members/celebration/calendar" },
         { name: " Minutes of Meetings", path: "/members/minutesof/meeting" },
         { name: " Project Documents & Reports", path: "/members/documents/reports" },
         { name: " Event Registrations ", path: "/members/event/registrations" },
         { name: "  Financial Reports ", path: "/members/reports" },
         { name: " Member Forum / Discussion Board ", path: "/members/forum" },
+        { name: " Member's Post Section ", path: "/members/post" },
       ],
     },
     {

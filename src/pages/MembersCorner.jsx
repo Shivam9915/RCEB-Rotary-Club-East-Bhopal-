@@ -9,7 +9,6 @@ import {
   Lock,
   X
 } from "lucide-react";
-import HappyDates from "../components/HappyDates";
 import Footer from "../components/Footer";
 
 const MembersCorner = () => {
@@ -191,7 +190,6 @@ const MembersCorner = () => {
         )}
       </AnimatePresence>
     </section>
-    <HappyDates/>
 </div>
 
 <Footer/>

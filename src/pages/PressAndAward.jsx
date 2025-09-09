@@ -184,11 +184,6 @@ const PressAndAward = () => {
         <Footer/>
     </div>
 
-
-    
-
-    
-
 </>
   );
 }

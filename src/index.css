@@ -513,3 +513,25 @@ body {
         .rotary-gradient {
           background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 50%, #3b82f6 100%);
       }
+
+
+
+
+
+
+
+/* 🎉 Confetti fall animation */
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.animate-fall {
+  animation: fall linear infinite;
+}
