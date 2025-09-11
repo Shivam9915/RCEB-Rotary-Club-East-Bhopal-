@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Star, Heart } from 'lucide-react';
-import Footer from '../components/Footer';
+import Footer from '../../components/Footer';
 
 const DonorRecognition = () => {
   // Framer Motion Variants

@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Leaf, Handshake, Syringe, School, Coins } from 'lucide-react';
-import Footer from '../components/Footer';
+import Footer from '../../components/Footer';
 
 const TRFPage = () => {
   // Framer Motion Variants

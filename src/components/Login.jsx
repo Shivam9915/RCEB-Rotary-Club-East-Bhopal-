@@ -20,6 +20,8 @@ const Login = () => {
         );
         if(response?.data.token){
           localStorage.setItem("token", response.data.token);
+          localStorage.setItem("id", response.data.id);
+
           navigate("/members/post");
         }
       

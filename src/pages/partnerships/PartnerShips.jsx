@@ -1,13 +1,13 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CreditCard, Banknote, Gift, Handshake } from 'lucide-react';
-import Footer from '../components/Footer';
+import { Sparkles, BarChart, Handshake, Globe } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../components/Footer';
 
-const Contribution = () => {
+const PartnerShips = () => {
+  const navigate = useNavigate()
   // Framer Motion Variants
-  const navigate = useNavigate();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -37,32 +37,32 @@ const Contribution = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
   };
 
-  const contributionMethods = [
+  const partnerBenefits = [
     {
-      icon: <CreditCard size={36} className="text-purple-400" />,
-      title: 'Online Donation',
-      description: 'Make a quick and secure contribution directly through our online portal using your credit card or other payment methods.',
+      icon: <Sparkles size={36} className="text-purple-400" />,
+      title: 'Enhanced Brand Reputation',
+      description: 'Align your brand with a trusted global organization dedicated to positive change, enhancing your public image.',
     },
     {
-      icon: <Banknote size={36} className="text-pink-400" />,
-      title: 'Bank Transfer',
-      description: 'You can contribute by directly transferring funds to our official bank account. Please contact us for details.',
+      icon: <BarChart size={36} className="text-pink-400" />,
+      title: 'Measurable Social Impact',
+      description: 'Get transparent reports and clear metrics on how your contribution is making a tangible difference in communities.',
     },
     {
-      icon: <Gift size={36} className="text-emerald-400" />,
-      title: 'In-Kind Donations',
-      description: 'Support our projects by donating goods or services. This is a great way to contribute your skills and resources.',
+      icon: <Handshake size={36} className="text-emerald-400" />,
+      title: 'Networking & Collaboration',
+      description: 'Connect with a global network of leaders, professionals, and fellow partners who share a commitment to social responsibility.',
     },
     {
-      icon: <Handshake size={36} className="text-cyan-400" />,
-      title: 'Legacy Giving',
-      description: 'Help secure the future of our foundation by including us in your estate planning or leaving a bequest in your will.',
+      icon: <Globe size={36} className="text-cyan-400" />,
+      title: 'Global & Local Reach',
+      description: 'Support projects that create change both in our local community and across the world through our international network.',
     },
   ];
 
   return (
 <>
-    <div className="bg-slate-900 mt-6 min-h-screen text-white font-sans overflow-hidden">
+    <div className="bg-slate-900 mt-6  min-h-screen text-white font-sans overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute top-0 left-0 w-full h-full bg-slate-900 z-0">
         <div className="absolute top-1/4 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-2xl opacity-10 animate-[blob_7s_infinite]"></div>
@@ -79,21 +79,36 @@ const Contribution = () => {
           animate="visible"
         >
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-            How to Contribute
+            CSR Partnerships
           </h1>
           <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
-            Your generosity powers our projects. Learn about the different ways you can make a meaningful impact.
+            Partner with us to amplify your corporate social responsibility and create lasting, positive change in the world.
           </p>
         </motion.div>
 
-        {/* --- Contribution Methods Section --- */}
+        {/* --- Why Partner Section --- */}
+        <motion.div
+          className="text-center mb-16"
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-yellow-300">
+            Why Partner with Us?
+          </h2>
+          <p className="text-lg text-slate-300 max-w-4xl mx-auto">
+            Our established projects and global network offer a powerful platform for your CSR initiatives to thrive. We ensure your investment makes a genuine, measurable impact.
+          </p>
+        </motion.div>
+
+        {/* --- Benefits Grid --- */}
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          {contributionMethods.map((item, index) => (
+          {partnerBenefits.map((item, index) => (
             <motion.div
               key={index}
               className="bg-slate-800/70 p-6 rounded-xl border border-slate-700 backdrop-blur-sm cursor-pointer hover:bg-yellow-800/20 transition-colors duration-300 flex flex-col items-center text-center"
@@ -109,7 +124,7 @@ const Contribution = () => {
           ))}
         </motion.div>
 
-        {/* --- More Information Section --- */}
+        {/* --- Call to Action --- */}
         <motion.div
           className="text-center mt-20 p-8 bg-slate-800/70 border border-slate-700 rounded-xl"
           variants={itemVariants}
@@ -117,10 +132,10 @@ const Contribution = () => {
           animate="visible"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-yellow-300">
-            Need More Information?
+            Ready to Partner?
           </h2>
           <p className="text-lg text-slate-300 mb-6 max-w-2xl mx-auto">
-            If you have questions about your donation or want to discuss corporate partnerships, please contact us directly. We are here to help.
+            Contact us today to explore partnership opportunities and discuss how we can work together to achieve your CSR goals.
           </p>
           <motion.button
           onClick={()=>navigate("/contact")}
@@ -128,7 +143,7 @@ const Contribution = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Contact Us
+            Get in Touch
           </motion.button>
         </motion.div>
       </div>
@@ -139,4 +154,4 @@ const Contribution = () => {
   );
 };
 
-export default Contribution;
+export default PartnerShips;

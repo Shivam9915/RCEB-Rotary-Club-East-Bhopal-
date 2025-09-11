@@ -34,16 +34,16 @@ import UpComingEvents from "./pages/UpComingEvents";
 import FoucusAreas from "./pages/FoucusAreas";
 import MemberSpotlight from "./pages/MemberSpotlight";
 import FoundingMembers from "./pages/FoundingMembers";
-import TRFPage from "./pages/TRF";
-import Contribution from "./pages/Contribution";
-import PartnerShips from "./pages/PartnerShips";
-import DonorRecognition from "./pages/DonorRecognition";
 import InternationalProject from "./pages/InternationalProject";
 import PressAndAward from "./pages/PressAndAward";
 import HappyDatesCalendar from "./components/HappyDatesCalendar";
 import MembersUpload from "./pages/MembersUpload";
 import Login from "./components/Login";
 import ProtectedRoute from "./hooks/ProtectedRoute";
+import TRFPage from "./pages/partnerships/TRF";
+import Contribution from "./pages/partnerships/Contribution";
+import PartnerShips from "./pages/partnerships/PartnerShips";
+import DonorRecognition from "./pages/partnerships/DonorRecognition";
 
 function App() {
   return (
@@ -106,7 +106,7 @@ function App() {
         <Route path="/events/videos" element={<VideoGallery />} />
         <Route path="/events/press" element={<PressAndAward />} />
         {/* <Route path="/fundraising/foundation" element={<RotaryFoundation/>} /> */}
-        <Route path="/fundraising/foundation" element={<TRFPage />} />
+        <Route path="/fundraising/foundation" element={<TRFPage/>} />
         <Route path="/fundraising/contribute" element={<Contribution />} />
         <Route path="/fundraising/csr" element={<PartnerShips />} />
         <Route path="/fundraising/donors" element={<DonorRecognition />} />
